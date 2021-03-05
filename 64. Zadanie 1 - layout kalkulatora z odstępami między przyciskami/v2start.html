@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Claculator - one div</title>
+ <style>
+  /* wykorzystaj body do wycentrowania kalkulatora za pomocą flexboxa */
+
+  /* nie można zmieniać struktury html */
+
+  /* kalkulator ma 60% szerokości body ale nie mniej niz 500px */
+
+  /* wyświetlacz wyniku ma 15vh wysokości */
+
+  /* przyciski mają 10vh wysokości */
+
+  /* Panel bez wyświetlacza ma mieć wysokość 70vh (czyli z wyświetlaczem 85vh)*/
+
+  * {
+   margin: 0;
+   padding: 0;
+  }
+
+  body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    
+    /* padding: 0 20%; */
+    
+  }
+
+  .panel{
+    height: 85vh;
+    width: 60%;
+    min-width: 350px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    font-size: 6vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  div.result~ div{
+    height: 10vh;
+    /* margin: auto 1vh; */
+    flex-basis: 32.5%;
+    text-align: center;
+    line-height: 10vh;
+    background-color: rgb(142, 224, 122);
+    cursor: pointer;
+  }
+
+  div.result~div:hover{
+    box-shadow: 2px 1px 2px 2px green;
+    font-weight: bolder;
+    background-color: rgb(15, 136, 136);
+  }
+
+  .panel div.result{
+    height: 15vh;
+    padding-right: 5%;
+    /* margin: auto 1vh; */
+    flex-basis: 100%;
+    text-align: right;
+    line-height: 15vh;     
+    color: white;
+    background-color: rgb(5, 5, 5);
+    cursor:auto;
+  }
+
+  .panel div.result:hover{
+    box-shadow: 2px 1px 2px 2px black;
+    font-weight: bolder;
+  }
+
+  div>div:nth-last-child(1),
+  div>div:nth-last-child(2){
+    flex-basis: 49%;
+  }
+
+ 
+  
+  
+
+
+ </style>
+</head>
+
+<body>
+ <div class="panel">
+  <div class="result">2 343.99</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>+</div>
+  <div>0</div>
+  <div>-</div>
+  <div>/</div>
+  <div>.</div>
+  <div>*</div>
+  <div>C</div>
+  <div>=</div>
+ </div>
+</body>
+
+</html>
